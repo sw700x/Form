@@ -1,0 +1,472 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Gilroy Medium';
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  background: #F4F5FA;
+  color: #1C154E;
+}
+
+input::-webkit-input-placeholder {
+  color: #D0D3E2;
+}
+
+input:-ms-input-placeholder {
+  color: #D0D3E2;
+}
+
+input::-ms-input-placeholder {
+  color: #D0D3E2;
+}
+
+input::placeholder {
+  color: #D0D3E2;
+}
+
+input:focus {
+  outline: none;
+}
+
+input {
+  border: none;
+  color: inherit;
+}
+
+input[type="radio"] {
+  position: relative;
+  height: 2.2rem;
+  width: 2.2rem;
+}
+
+input[type='radio']::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #FFFFFF;
+  border: 0.15rem solid #E1E3EE;
+}
+
+input[type='radio']:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-color: #23C967;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0 0 0 1rem #F4F5FA;
+          box-shadow: 0 0 0 1rem #F4F5FA;
+  visibility: visible;
+}
+
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  border: none;
+}
+
+.container {
+  width: 176rem;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.animation {
+  -webkit-transition: all 860ms ease-in;
+  transition: all 860ms ease-in;
+}
+
+.section {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  width: 100%;
+  min-height: 100vh;
+}
+
+form {
+  width: 44rem;
+  min-height: 53.5rem;
+  background: #FFFFFF;
+  border-radius: 0 5rem 5rem 5rem;
+  -webkit-box-shadow: 1rem 1rem 6rem #E2E7FF;
+          box-shadow: 1rem 1rem 6rem #E2E7FF;
+  position: relative;
+}
+
+form .form {
+  padding: 3.5rem 1.5rem 3.5rem 3.5rem;
+  min-width: 37rem;
+  height: 100%;
+}
+
+form .form .content {
+  height: 36.9rem;
+  overflow-y: auto;
+  padding-right: 1.5rem;
+}
+
+form .form .content .payment {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  gap: 2rem;
+}
+
+form .form .content .payment .payment-head .head {
+  font-family: 'Gilroy Bold';
+  font-size: 1.8rem;
+}
+
+form .form .content .payment .payment-head p {
+  margin-top: 1.2rem;
+}
+
+form .form .content .payment .payment-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 24rem;
+}
+
+form .form .content .products {
+  display: -ms-grid;
+  display: grid;
+  gap: 2.5rem;
+}
+
+form .form .content .products .product-elem {
+  display: -ms-grid;
+  display: grid;
+  gap: 1.2rem;
+}
+
+form .form .content .products .product-elem .product-head {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .5rem;
+}
+
+form .form .content .products .product-elem .product-head .head {
+  font-family: 'Gilroy Bold';
+  font-size: 1.8rem;
+}
+
+form .form .content .products .product-elem .product-head .remove {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+form .form .content .products .product-elem .product-item {
+  display: -ms-grid;
+  display: grid;
+}
+
+form .form .content .products .product-elem .product-item input {
+  width: 100%;
+  padding: 1.2rem 0;
+  border-bottom: 0.1rem solid #E1E3EE;
+}
+
+form .form .content .products .add-product {
+  display: -ms-grid;
+  display: grid;
+  gap: 1.2rem;
+}
+
+form .form .content .products .add-product .head {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-auto-flow: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: .5rem;
+  font-family: 'Gilroy Semibold';
+  font-size: 1.8rem;
+  color: #23C967;
+  cursor: pointer;
+  width: 21rem;
+}
+
+form .form .content .products .add-product .head .add {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+form .form .content .products .add-product .add-info {
+  color: #494471;
+}
+
+form .form .content .adding-elem {
+  color: #1C154E;
+}
+
+form .form .content .adding-elem span {
+  font-family: 'Gilroy Bold';
+  font-size: 1.8rem;
+}
+
+form .form .content .adding-elem p {
+  margin-top: 1.2rem;
+}
+
+form .form .content .select-product {
+  margin-top: 1.2rem;
+  max-width: 37rem;
+  border: 0.1rem solid #E1E3EE;
+  border-radius: 2.5rem;
+}
+
+form .form .content .select-product .select-elem, form .form .content .select-product input {
+  cursor: pointer;
+}
+
+form .form .content .select-product .select-elem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 6rem;
+  border-bottom: 0.1rem solid #E1E3EE;
+}
+
+form .form .content .select-product .select-elem .select-item {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.2rem;
+  padding: 1rem 1.6rem;
+}
+
+form .form .content .select-product .select-elem .select-item .select-description .select-head {
+  font-family: 'Gilroy Semibold';
+  color: #000000;
+}
+
+form .form .content .select-product .select-elem .select-item .select-description .select-info {
+  font-family: 'Gilroy Medium';
+  font-size: 1.3rem;
+  color: #A7A2CB;
+  margin-top: .5rem;
+}
+
+form .form .content .select-product .select-elem:hover {
+  background: #F4F5FA;
+}
+
+form .form .content .select-product .select-elem:first-child:hover {
+  border-radius: 2.5rem 2.5rem 0 0;
+}
+
+form .form .content .select-product .select-elem:last-child {
+  border-bottom: none;
+}
+
+form .form .content .select-product .select-elem:last-child:hover {
+  border-radius: 0 0 2.5rem 2.5rem;
+}
+
+form .form .content::-webkit-scrollbar {
+  width: .4rem;
+  border-radius: 1rem;
+  background: #E1E3EE;
+}
+
+form .form .content::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: #23C967;
+  height: 1rem;
+}
+
+form .form .content::-webkit-scrollbar-track {
+  background: #E1E3EE;
+  border-radius: 1rem;
+  height: 1rem;
+}
+
+form .form .area-button {
+  margin-top: 2rem;
+  padding-right: 1.5rem;
+}
+
+form .form .area-button button {
+  width: 100%;
+  height: 4.5rem;
+  font-family: 'Gilroy Bold';
+  font-size: 1.8rem;
+  background: #23C967;
+  color: #FFFFFF;
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+
+form .form .area-button .safe {
+  margin-top: 1rem;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: .5rem;
+  font-size: 1.4rem;
+  color: #A7A2CB;
+}
+
+form .form .area-button .error-button {
+  background: #EA717F;
+}
+
+form .form .area-button .loading {
+  position: relative;
+}
+
+form .form .area-button .loading::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 3.2rem;
+  width: 3.2rem;
+  border: .3rem solid transparent;
+  border-top: 0.3rem solid #FFFFFF;
+  border-radius: 50%;
+  -webkit-animation: loader 860ms cubic-bezier(0.77, 0, 0.175, 1) infinite;
+          animation: loader 860ms cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+
+form .decoration {
+  position: absolute;
+  top: -1.5rem;
+  right: -3rem;
+  z-index: -10;
+}
+
+@media screen and (max-width: 512px) {
+  form {
+    max-width: 44rem;
+    width: 100%;
+  }
+  form .form {
+    min-width: auto;
+  }
+  form .form .payment-img {
+    height: 18rem !important;
+  }
+  form .form .payment-img img {
+    width: 80%;
+  }
+  form .decoration {
+    right: -1rem;
+  }
+}
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes tran {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes tran {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */

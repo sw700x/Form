@@ -1,0 +1,374 @@
+$Black: #000000;
+$Blue-1: #1C154E;
+$Blue-2: #494471;
+
+$White: #FFFFFF;
+
+$Gray-1: #F4F5FA;
+$Gray-2: #E1E3EE;
+$Gray-3: #D0D3E2;
+$Gray-4: #A7A2CB;
+$Gray-5: #E2E7FF;
+
+$Green: #23C967;
+$Pink: #EA717F;
+
+// font-family: 'Gilroy Light';
+// font-family: 'Gilroy Regular';
+// font-family: 'Gilroy Medium';
+// font-family: 'Gilroy Bold';
+// font-family: 'Gilroy Semibold';
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Gilroy Medium';
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+    background: $Gray-1;
+    color: $Blue-1;
+}
+
+input::placeholder {
+    color: $Gray-3;
+}
+input:focus {
+    outline: none;
+}
+input {
+    border: none;
+    color: inherit;
+}
+
+input[type="radio"] {
+    position: relative;
+    height: 2.2rem;
+    width: 2.2rem;
+}
+
+input[type='radio']::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $White;
+    border: .15rem solid $Gray-2;
+}
+
+input[type='radio']:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: $Green;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 1rem $Gray-1;
+    visibility: visible;
+}
+
+button {
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.container {
+    width: 176rem;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.animation {
+    transition: all 860ms ease-in;
+}
+
+.section {
+    display: grid;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    min-height: 100vh;
+}
+
+form {
+    width: 44rem;
+    min-height: 53.5rem;
+    background: $White;
+    border-radius: 0 5rem 5rem 5rem;
+    box-shadow: 1rem 1rem 6rem $Gray-5;
+    position: relative;
+    .form {
+        padding: 3.5rem 1.5rem 3.5rem 3.5rem;
+        min-width: 37rem;
+        height: 100%;
+
+        // Content 
+        .content {
+            height: 36.9rem;
+            overflow-y: auto;
+            padding-right: 1.5rem;
+            .payment {
+                display: grid;
+                grid-template-rows: auto auto;
+                gap: 2rem;
+                .payment-head {
+                    .head {
+                        font-family: 'Gilroy Bold';
+                        font-size: 1.8rem;
+                    }
+                    p {
+                        margin-top: 1.2rem;
+                    }
+                }
+                .payment-img {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 24rem;
+                }
+            }
+
+            // Products
+            .products {
+                display: grid;
+                gap: 2.5rem;
+                .product-elem {
+                    display: grid;
+                    gap: 1.2rem;
+                    .product-head {
+                        display: grid;
+                        grid-auto-flow: column;
+                        justify-content: start;
+                        align-items: center;
+                        gap: .5rem;
+                        .head {
+                            font-family: 'Gilroy Bold';
+                            font-size: 1.8rem;
+                        }
+                        .remove {
+                            display: grid;
+                            align-items: center;
+                            justify-content: center;
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            cursor: pointer;
+                        }
+                    }
+                    .product-item {
+                        display: grid;
+                        input {
+                            width: 100%;
+                            padding: 1.2rem 0;
+                            border-bottom: .1rem solid $Gray-2;
+                        }
+                    }
+                }
+                .add-product {
+                    display: grid;
+                    gap: 1.2rem;
+                    .head {
+                        display: grid;
+                        align-items: center;
+                        grid-auto-flow: column;
+                        justify-content: start;
+                        gap: .5rem;
+                        font-family: 'Gilroy Semibold';
+                        font-size: 1.8rem;
+                        color: $Green;
+                        cursor: pointer;
+                        width: 21rem;
+                        .add {
+                            display: grid;
+                            align-items: center;
+                            justify-content: center;
+                            width: 1.5rem;
+                            height: 1.5rem;
+                        }
+                    }
+                    .add-info {
+                        color: $Blue-2;
+                    }
+                }
+            }
+
+            // Adding window
+            .adding-elem {
+                color: $Blue-1;
+                span {
+                    font-family: 'Gilroy Bold';
+                    font-size: 1.8rem;
+                }
+                p {
+                    margin-top: 1.2rem;
+                }
+            }
+            .select-product {
+                margin-top: 1.2rem;
+                max-width: 37rem;
+                border: .1rem solid $Gray-2;
+                border-radius: 2.5rem;
+                .select-elem, input {
+                    cursor: pointer;
+                }
+                .select-elem {
+                    display: flex;
+                    min-height: 6rem;
+                    border-bottom: .1rem solid $Gray-2;
+                    .select-item {
+                        display: grid;
+                        grid-auto-flow: column;
+                        justify-content: start;
+                        align-items: center;
+                        gap: 1.2rem;
+                        padding: 1rem 1.6rem;
+                    
+                        
+                        .select-description {
+                            .select-head {
+                                font-family: 'Gilroy Semibold';
+                                color: $Black;
+                            }
+                            .select-info {
+                                font-family: 'Gilroy Medium';
+                                font-size: 1.3rem;
+                                color: $Gray-4;
+                                margin-top: .5rem;
+                            }
+                        }
+                    }
+                }
+                .select-elem:hover {
+                    background: $Gray-1;
+                }
+                .select-elem:first-child:hover {
+                    border-radius: 2.5rem 2.5rem 0 0;
+                }
+                .select-elem:last-child {
+                    border-bottom: none;
+                }
+                .select-elem:last-child:hover {
+                    border-radius: 0 0 2.5rem 2.5rem;
+                }
+            }
+        }
+        .content::-webkit-scrollbar {
+            width: .4rem;
+            border-radius: 1rem;
+            background: $Gray-2;
+            
+        }
+        .content::-webkit-scrollbar-thumb {
+            border-radius: 1rem;
+            background-color: $Green;
+            height: 1rem;
+          }
+        .content::-webkit-scrollbar-track {
+            background: $Gray-2;
+            border-radius: 1rem;
+            height: 1rem;
+        }
+
+
+        // Area button 
+        .area-button {
+            margin-top: 2rem;
+            padding-right: 1.5rem;
+            button {
+                width: 100%;
+                height: 4.5rem;
+                font-family: 'Gilroy Bold';
+                font-size: 1.8rem;
+                background: $Green;
+                color: $White;
+                border-radius: 1.5rem;
+                cursor: pointer;
+            }
+            .safe {
+                margin-top: 1rem;
+                display: grid;
+                grid-auto-flow: column;
+                justify-content: center;
+                gap: .5rem;
+                font-size: 1.4rem;
+                color: $Gray-4;
+            }
+            .error-button {
+                background: $Pink;
+            }
+            .loading {
+                position: relative;
+            }
+            .loading::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0; 
+                left: 0;
+                right: 0;
+                bottom: 0; 
+                margin: auto;
+                height: 3.2rem;
+                width: 3.2rem;
+                border: .3rem solid transparent;
+                border-top: .3rem solid $White;
+                border-radius: 50%;
+                animation: loader 860ms cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
+              }
+        }
+    }
+    .decoration {
+        position: absolute;
+        top: -1.5rem;
+        right: -3rem;
+        z-index: -10;
+    }
+}
+@media screen and (max-width: 512px) {
+    form {
+        max-width: 44rem;
+        width: 100%;
+        .form {
+            min-width: auto;
+            .payment-img {
+                height: 18rem !important;
+
+                img {
+                    width: 80%;
+            }
+            }
+        }
+        .decoration {
+            right: -1rem;
+        }
+    }
+}
+
+
+@keyframes loader {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes tran {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
